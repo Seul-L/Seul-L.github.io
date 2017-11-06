@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seul-L</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="active" href="../html/bhtml.html">HTML</a></li>
+      <li><a href="../html/howto.html">More HTML</a></li>
+      <li><a href="../html/bcss.html">CSS</a></li>
+    </ul>
+  </nav>
+
+  <div class="content_html">
+    <h1>Basic HTML</h1>
+
+    <h2>What is HTML?</h2>
+    <p>HTML is acronym of <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage. It is a standard markup language that is used for creating content and structure of a webpage</p>
+
+    <h2>Basic Elements</h2>
+    <p>Most of HTML elements have opening tag and closing tag.<br> Opening tag looks like &lt;tag name&gt; and closing tag looks like &lt;&sol;tag name&gt;. Some tags such as img, input, br, hr, meta, etc are self closing tag which means they don't need
+      closing tag.</p>
+
+    <h2>Structure</h2>
+    <p>Below is a visualization of an HTML page structure &lpar;source from <a target="_blank" href="www.w3schools.com">w3school website</a>&rpar;:</p>
+
+    <div id="htmlbox">&lt;!DOCTYPE html&gt;<br><br>&lt;html&gt;
+      <div id="headbox">&lt;head&gt;
+        <div id="titlebox">&lt;title&gt;Page title&lt;/title&gt;
+        </div>
+        &lt;/head&gt;
+      </div>
+      <div id="bodybox">&lt;body&gt;
+        <div id="bodycontentbox">
+          <div id="h1box">&lt;h1&gt;This is a heading&lt;/h1&gt;</div>
+          <div id="p1box">&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+          <div id="p2box">&lt;p&gt;This is another paragraph.&lt;/p&gt;</div>
+        </div>
+        &lt;/body&gt;
+      </div>
+      &lt;/html&gt;
+    </div>
+
+    <h2>What is &lt;!DOCTYPE html&gt;?</h2>
+    <p>The &lt;!DOCTYPE html&gt; is showing the document type to help browsers to display web pages correctly. It only appear once, at the top of the document. The &quot;head&quot; section is not shown on the browser and it contains meta information about
+      the document. Only the contents in the &quot;body&quot; section is shown on the browser.</p>
+
+    <h2>What is &lt;meta&gt;?</h2>
+    <p>Meta tag contains information of the page such as title, author, description, keywords, etc. </p>
+    <p>Some of Meta data:</p>
+    <ul>
+      <li>&lt;meta charset=&quot;utf-8&quot;&gt;<br>Charset is rule of characters and it shows what method of encoding or decoding language is used to read this document. In this case, utf-8 is the language that you will save this document as and to read
+        as.
+      </li>
+      <li>&lt;meta name=&quot;description&quot; content=&quot;This is intro to HTML&quot;&gt; <br>This is used to give description.</li>
+      <li>&lt;meta name=&quot;keywords&quot; content=&quot;HTML, coding, programming, beginner, front-end, developer&quot;&gt; <br>This is used to give keywords that could be searched online.</li>
+      <li>&lt;meta name=&quot;author&quot; content=&quot;Seul&quot;&gt; <br>This is used to define author of the document.</li>
+      <li>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt; <br>This is will let broswer to auto refresh every 30 seconds.</li>
+    </ul>
+
+    <h2>What is sementic elements?</h2>
+    <p>To describe information on document efficiently, using tags that has right meaning of what you want to display is necessary. The following is a list of some of the semantic elements:</p>
+
+    <table id="sementic_elements" border="1" cellpadding="1" cellspacing="1">
+      <tbody>
+        <tr>
+          <td>article</td>
+          <td>main body contents</td>
+        </tr>
+        <tr>
+          <td>aside</td>
+          <td>For text that is somewhat not relate closly with main content, such as advertisment.</td>
+        </tr>
+        <tr>
+          <td>details</td>
+          <td>To declare information that is not displayed on screen</td>
+        </tr>
+        <tr>
+          <td>figure</td>
+          <td>To declare some additional elements like image or diagram</td>
+        </tr>
+        <tr>
+          <td>footer</td>
+          <td>To show overall information of the website or document at the bottom of the page or screen</td>
+        </tr>
+        <tr>
+          <td>header</td>
+          <td>To show overall information of the website or document at the top of the page or screen</td>
+        </tr>
+        <tr>
+          <td>main</td>
+          <td>To declare the most focused and main content of the body</td>
+        </tr>
+        <tr>
+          <td>mark</td>
+          <td>To declare character that displays reference or hightlight</td>
+        </tr>
+        <tr>
+          <td>nav</td>
+          <td>To declare navigation bar for the website</td>
+        </tr>
+        <tr>
+          <td>section</td>
+          <td>To declare some sections or parts of the document (<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">More Reference</a>)</td>
+        </tr>
+        <tr>
+          <td>time</td>
+          <td>To declare time</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Viewport setting for supporting mobile version</h2>
+    <p>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; <br>This make width of the document to the width of the device by scaling in 1.0. So the screen size will automatically optimize for the device the user
+      is using.</p>
+
+    <br>
+    <hr>
+    <p id="html_ending">Basically, this is everything about HTML. <br>However, it is ugly with just this HTML document alone. <br>This is where CSS comes in play.</p>
+    <hr>
+    <h3>Some lists of HTML references:</h3>
+    <ul>
+      <li><a target="_blank" href="https://www.w3schools.com/tags/default.asp">HTML Elements</a></li>
+      <li><a target="_blank" href="https://brajeshwar.github.io/entities/">Character Entities</a></li>
+      <li><a href="https://static.googleusercontent.com/media/www.google.com/ko//webmasters/docs/search-engine-optimization-starter-guide.pdf">Google Reference for optimizing search engine</a></li>
+      <li><a href="http://caniuse.com/">Can my features used in most of browsers?</a></li>
+    </ul>
+  </div>
+  <br>
+  <footer>&copy;2017 Seul Lee</footer>
+</body>
+
+</html>

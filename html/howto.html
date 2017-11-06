@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seul-L</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../html/bhtml.html">HTML</a></li>
+      <li><a class="active" href="../html/howto.html">More HTML</a></li>
+      <li><a href="../html/bcss.html">CSS</a></li>
+    </ul>
+  </nav>
+
+  <div class="content_howto">
+    <h1>How to add video into my webpage?</h1>
+    <p>Code:</p>
+    <pre class="box">&lt;video&gt;
+  &lt;source src=&quot;video/small.mp4&quot;&gt;
+&lt;&sol;video&gt;</pre>
+    <ul>
+      <li>This is used to add video on to your website. Depending on browsers that user is using, the video might not be shown depending on the which extension the video is in. So you can add multiple video tags with different extensions.</li>
+      <li>In the &lt;video&gt; if you add attribute called &quot;controls&quot;, the video control bar is also added in the video.</li>
+    </ul>
+    <hr>
+    <h1>How to make forms with HTML</h1>
+
+    <h2>Elements and attributes</h2>
+    <pre class="box">&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+  &lt;p&gt;ID:&lt;input type=&quot;text&quot; name=&quot;id&quot; value=&quot;what is your id?&quot;&gt;&lt;/p&gt;
+  &lt;p&gt;Password:&lt;input type=&quot;password&quot; name=&quot;pwd&quot;>&lt;/p&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</pre>
+    <ul>
+      <li>To make a form we start with &lt;form&gt; &lt;&sol;form&gt;.</li>
+      <li>To make where user input something, &lt;input&gt; tag is used with &lt;p&gt; tag. In this tag, we can declare attributes like what type of input you want user to use. This can be done by adding &quot;type&quot; attribute.<br>For example, if you
+        want user to write text as the input, &lt;input type=&quot;text&quot;&gt;.</li>
+      <li>To redirect user to other page after clicking submit button, we give attribute called &quot;action&quot; inside the &lt;form&gt; tag. Inside the &quot;action attribute&quot;, put the address of the document where you want the user to go to.</li>
+      <li>To give some kind of name to each of the fields, use attribute called &quot;name&quot; inside the &lt;input&gt; tag after &quot;type&quot; attribute.</li>
+      <li>To give some pre-written message in the field, use attribute called &quot;value&quot; with &quot;whatever message you want to display&quot; as content, inside the &lt;input&gt; tag after &quot;type&quot; attribute.</li>
+    </ul>
+
+    <p>Example:</p>
+    <form class="ex" action="" method="post">
+      <p>ID: <input type="text" name="id" value="what is your id?"></p>
+      <p>Password: <input type="password" name="pwd"></p>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <hr>
+    <h2>Additional form tags</h2>
+    <ol>
+      <li>Field that allows to insert long text:
+        <ul>
+          <pre class="box">&lt;p&gt;Comment: &lt;textarea cols=&quot;50&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;</pre>
+          <li>With attribute, &quot;cols&quot; and &quot;rows&quot;. This shows how much characters can go in.</li><br>
+          <li>Example:
+            <form class="ex" action="">
+              <p>Comment: <br><textarea cols="50" rows="4"></textarea></p>
+              <input type="submit" value="Submit">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Dropdown List:
+        <ul>
+          <pre class="box">&lt;select name=&quot;color&quot;&gt;
+  &lt;option value=&quot;select&quot;&gt;-select-&lt;/option&gt;
+&lt;/select&gt;</pre>
+          <li>Example:</li>
+          <form class="ex" action="">
+            <p>Select a colour</p>
+            <select name="color">
+                <option value="select">-select-</option>
+                <option value="red">Red</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+            </select>
+            <input type="submit" value="Submit">
+          </form>
+          <br><br>
+          <li>If you want multiple selection list, add attribute called &quot;multiple&quot; like this: <pre class="box">&lt;select name=&quot;color&quot; multiple&gt;</pre> and have all the options just like dropdown list.</li><br>
+          <li>Example:</li>
+          <form class="ex" action="">
+            <p>Select Colours (To do multiple selection, press ctrl or cmd key when selcting)</p>
+            <select name="colors" multiple>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+            </select>
+            <input type="submit" value="Submit">
+          </form>
+        </ul>
+        <br></li>
+      <li>Radio selections:
+        <ul>
+          <pre class="box">&lt;p&gt;Red &lt;input type=&quot;radio&quot; name=&quot;color&quot; value=&quot;red&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Black &lt;input type=&quot;radio&quot; name=&quot;color&quot; value=&quot;black&quot; checked&gt;&lt;/p&gt;</pre>
+          <li>If you want something selected in default, add attribute called &quot;checked&quot;</li><br>
+          <li>Example:
+            <form class="ex" action="">
+              <h4>Select a colour</h4>
+              <p>Red <input type="radio" name="color" value="red"></p>
+              <p>Black <input type="radio" name="color" value="black" checked></p>
+              <p>Blue <input type="radio" name="color" value="blue">
+              </p>
+              <input type="submit" value="Submit">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Checkbox selections:
+        <ul>
+          <pre class="box">&lt;p&gt;XS &lt;input type=&quot;checkbox&quot; name=&quot;size&quot; value=&quot;XS&quot;&gt;&lt;/p&gt;
+&lt;p&gt;S &lt;input type=&quot;checkbox&quot; name=&quot;size&quot; value=&quot;S&quot; checked&gt;&lt;/p&gt;</pre>
+          <li>If you want multiple of something selected in default, add attribute called &quot;checked&quot; in each of them</li><br>
+          <li>Example:
+            <form class="ex" action="">
+              <h4>Select sizes (multiple selection)</h4>
+              <p>XS <input type="checkbox" name="size" value="XS"></p>
+              <p>S <input type="checkbox" name="size" value="S" checked></p>
+              <p>M <input type="checkbox" name="size" value="M" checked>
+              </p>
+              <p>L <input type="checkbox" name="size" value="L">
+              </p>
+              <input type="submit" value="Submit">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Buttons VS submit:
+        <ul>
+          <li>Button is different with submit. Submit redirect user to other pages but button does not do anything. It could have some other action when used with javascript. For this example, alert pops up.</li>
+          <li>With input type &quot;reset&quot;, it makes a button that erases contents that user entered.</li>
+          <pre class="box">&lt;input type=&quot;button&quot; value=&quot;send&quot; onlick=&quot;alert&lpar;&apos;thank you&apos;&rpar;&quot;&gt;</pre><br>
+          <li>Example:
+            <form class="ex" action="">
+              <h4>Your email</h4>
+              <input type="text">
+              <input type="button" value="Send" onclick="alert('thank you')">
+              <input type="reset">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Sending data via Hidden field:
+        <ul>
+          <pre class="box">&lt;input type=&quot;hidden&quot; name=&quot;hide&quot; value=&quot;Seul&quot;&gt;</pre>
+          <li>This is used when there is no UI but you want to send some information that can't be seen on the screen.</li><br>
+          <li>Example:
+            <form class="ex" action="">
+              <p>Enter the code:</p>
+              <input type="text" name="id">
+              <input type="hidden" name="hide" value="Seul">
+              <input type="submit" value="Send">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Label:
+        <ul>
+          <pre class="box">&lt;label&gt; &lt;&sol;label&gt;</pre>
+          <li>This is used to distinguish label with regular paragraph or text for the browser to understand better. By giving &quot;for&quot; attribute, you can link with id.</li>
+          <pre class="box">&lt;label for=&quot;id_txt&quot;&gt;ID:&lt;&sol;label&gt;</pre>
+          <li>If you don't want to give attribute, you can wrap all with the label. It allows the focus to be on even when you click on the label not the field or selection tool itself.</li>
+          <pre class="box">&lt;p&gt;&lt;label&gt;ID:&lt;input type=&quot;id&quot; name=&quot;id&quot;&gt;&lt;&sol;label&gt;&lt;&sol;p&gt;</pre>
+          <li>Example:
+            <form class="ex" action="">
+              <p>
+                <label for="id_txt">ID:</label>
+                <input id="id_txt" type="text" name="id"></p>
+              <p>
+                <label>Password:
+            <input type="password" name="pwd"></label></p>
+              <p><label>
+            <input type="checkbox" name="size" value="XS">XS</label>
+                <label for="id_size">
+              <input id="id_size" type="checkbox" name="size" value="M">M</label></p>
+              <input type="submit" value="Submit">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Method:
+        <ul>
+          <li>This is used to send data by different methods. Such as &quot;post&quot; or &quot;get&quot;, etc.</li>
+          <pre class="box">&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;&lt;&sol;form&gt;</pre>
+          <li>By giving &quot;post&quot; attribute, you can send data to server not through url. So the data is hidden and safe. This is used normally when you use form but the method is decided by engineer at server side.</li>
+          <pre class="box">&lt;form action=&quot;&quot; method=&quot;get&quot;&gt;&lt;&sol;form&gt;</pre>
+          <li>By giving &quot;get&quot; attribute, when data is sent, data is sent by url. &quot;get&quot; is the default method when you use form without method attribute declared.</li><br>
+          <li>Example:
+            <form class="ex" action="" method="post">
+              <p>Method by post</p>
+              <label>ID: <input type="text" name="id"></label>
+              <label>Password: <input type="password" name="pwd"></label>
+              <input type="submit">
+            </form>
+            <br>
+            <form class="ex" action="" method="get">
+              <p>Method by get</p>
+              <label>ID: <input type="text" name="id"></label>
+              <label>Password: <input type="password" name="pwd"></label>
+              <input type="submit">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+      <li>Uploading files:
+        <ul>
+          <pre class="box">&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+  &lt;input type=&quot;file&quot; name=&quot;name of the file&quot;&gt;
+&lt;/form&gt;</pre>
+          <li>This is used to upload file. The actual displaying the file on the screen will be done by server. When you are using some kind of uploading function, enctype=&quot;multipart/form-data&quot; is needed in the form tag.</li><br>
+          <li>Example:
+            <form class="ex" action="" method="post" enctype="multipart/form-data">
+              <p>Upload your resume:</p>
+              <input type="file" name="profile">
+              <input type="submit">
+            </form>
+          </li>
+        </ul>
+        <br></li>
+    </ol>
+
+    <h2>New Input Types in HTML5</h2>
+    <p>Restrict input type for user to enter information that you want user to input.</p>
+    <p>The following is a list of some of the input types:</p>
+    <ul>
+      <li>color</li>
+      <li>date</li>
+      <li>datetime</li>
+      <li>datetime-local</li>
+      <li>email</li>
+      <li>month</li>
+      <li>number
+        <ul>
+          <li>Restrict value to be in between 10 and 15 by adding attribute: min=&quot;10&quot; max=&quot;15&quot;</li>
+        </ul>
+      </li>
+      <li>range</li>
+      <li>search</li>
+      <li>tel</li>
+      <li>time</li>
+      <li>url</li>
+      <li>week</li>
+    </ul>
+    <p>Example:
+      <pre class="box">&lt;form action=&quot;&quot; autocomplete=&quot;on&quot;&gt;
+  &lt;input type=&quot;date&quot; name=&quot;dob&quot;&gt;
+  &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;off&quot; placeholder=&quot;enter password&quot;&gt;
+  &lt;input type=&quot;submit&quot;&gt;
+&lt;&sol;form&gt;</pre></p>
+    <p>Example:
+      <form class="ex" action="" autocomplete="on">
+        <p>Sign Up</p>
+        <label>Username: <input type="email" name="email" placeholder="Enter username"></label>
+        <label>DOB:<input type="date" name="dob"></label>
+        <label>Password: <input type="password" name="password" autocomplete="off" placeholder="Enter password"></label>
+        <input type="submit">
+      </form>
+    </p>
+    <br>
+    <hr>
+    <h2>How to check input value is valid?</h2>
+    <ol>
+      <li>To validate the input value that user entered, set the type. Also you can add attribute called &quot;required&quot; to make mandatory field. If required field is not filled, tool tip will alert.<br>
+        <form class="ex" action="" method="post">
+          <p>*Required</p>
+          <input type="text" name="id" placeholder="Enter ID">
+          <input type="email" name="email" placeholder="*Enter Email Address" required>
+          <input type="submit">
+        </form>
+      </li>
+      <li>Set the regular expression by adding attribute called &quot;required pattern&quot;</li>
+      <pre class="box">&lt;input type=&quot;password&quot; name=&quot;password&quot;placeholder=&quot;enter password&quot; required pattern=&quot;&lsqb;a-zA-Z&rsqb;&quot;&gt;</pre>
+      <ul>
+        <li>&lsqb;a-zA-Z&rsqb; means one lowercase alphabet and one uppercase alphabet.</li>
+        <li>&lsqb; . &rsqb; means anything</li>
+        <li>&lsqb; + &rsqb; means more than one</li><br>
+        <li>For example:</li>
+        <form class="ex" action="" method="post">
+          <p>Sign Up:</p>
+          <input type="text" name="id" placeholder="Enter ID">
+          <input type="text" name="password" placeholder="Enter password" required pattern="[a-z].+">
+          <input type="email" name="email" placeholder="Enter Email Address" required>
+          <input type "submit">
+        </form>
+      </ul>
+    </ol>
+    <br>
+    <hr>
+    <h1>How to make table with HTML</h1>
+    <h2>Structure</h2>
+    <pre class="box">&lt;table border=&quot;1&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2017-10-08&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;&sol;table&gt;</pre>
+
+    <h2>Elements and attributes</h2>
+
+    <h3>Skeleton elements</h3>
+    <ul>
+      <li>To make table with HTML, we use tag called &quot;table&quot; like this: &lt;table&gt; &lt;&sol;table&gt;</li>
+      <li>Table row is wraped with tag &lt;tr&gt; &lt;&sol;tr&gt;</li>
+      <li>Each table cell is wraped with tag &lt;td&gt; &lt;&sol;td&gt;</li>
+      <li>Table headings can be grouped with tag &lt;thead&gt; &lt;&sol;thead&gt;. Wherever this tag is located in the table, it will be shown as first row of the table.</li>
+      <li>Table headings data is wraped with tag &lt;th&gt; &lt;&sol;th&gt;</li>
+      <li>Table body can be grouped with tag &lt;tbody&gt; &lt;&sol;tbody&gt;</li>
+      <li>Table footer can be grouped with tag &lt;tfoot&gt; &lt;&sol;tfoot&gt;. Wherever this tag is located in the table, it will be shown as last row of the table.</li>
+      <br>
+      <li>Example:</li>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Membership Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2017-10-08</td>
+            <td>Vicky</td>
+            <td>Manager</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>2017-10-08</td>
+            <td>Kate</td>
+            <td>Member</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>2017-10-08</td>
+            <td>Amy</td>
+            <td>Member</td>
+            <td>50</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td>200</td>
+          </tr>
+        </tfoot>
+      </table>
+    </ul>
+
+    <h3>Additional function</h3>
+    <ul>
+      <li>To merge cells vertically, we use attributes &quot;rowspan&quot;inside the &lt;td&gt; tag. Meaning three rows will be merged which is directly below the one you chose. The tag and content of the one that is being merged can be deleted.</li>
+      <pre class="box">&lt;td rowspan=&quot;3&quot;&gt; &lt;/td&gt;</pre>
+      <li>To merge cells horizontally, we use attributes &quot;colspan&quot;inside the &lt;td&gt; tag. Meaning three coloums will be merged which is directly next to the one you chose. The tags and contents of the one that are being merged can be deleted.</li>
+      <pre class="box">&lt;td colspan=&quot;3&quot;&gt; &lt;/td&gt;</pre>
+      <li>Example:</li>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Membership Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">2017-10-08</td>
+            <td>Vicky</td>
+            <td>Manager</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>Kate</td>
+            <td>Member</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Amy</td>
+            <td>Member</td>
+            <td>50</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total</td>
+            <td>200</td>
+          </tr>
+        </tfoot>
+      </table>
+    </ul>
+  </div>
+  <br>
+  <footer>&copy;2017 Seul Lee</footer>
+</body>
+
+</html>
