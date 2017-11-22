@@ -1,5 +1,5 @@
 # Seul-L.github.io
-Resources for anyone who is interested in programming.
+Front-end development resources.
 
 1. HTML
 2. CSS
