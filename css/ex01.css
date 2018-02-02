@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+.content-html, .content-howto {
+  margin-left: 15%;
+  padding: 1px 50px;
+}
+
+a {
+  color: #767ef2;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.cards {
+  border: 1px solid #999;
+  width: 30%;
+  height: 10%;
+  padding: 0% 2% 0% 4%;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-style: none;
+}
+
+.ex-number {
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.ex-title {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.cards:hover:not(.active) {
+  background-color: #fff;
+  color: #767ef2;
+  box-shadow: 0px 2px 20px #dfdfdf;
+}
+
+/*** footer ***/
+
+footer {
+  font-size: 14px;
+  text-align: right;
+  padding-right: 50px;
+  background-color: #767ef2;
+  color: #fff;
+}
