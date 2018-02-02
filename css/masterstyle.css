@@ -117,6 +117,42 @@ nav li a:hover:not(.active) {
   background-color: #baddf8;
 }
 
+/*** exercises page ***/
+
+.container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.cards {
+  border: 1px solid #999;
+  width: 30%;
+  height: 10%;
+  padding: 0% 2% 0% 4%;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-style: none;
+}
+
+.ex-number {
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.ex-title {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.cards:hover:not(.active) {
+  background-color: #fff;
+  color: #767ef2;
+  box-shadow: 0px 2px 20px #dfdfdf;
+}
+
 /*** footer ***/
 
 footer {
