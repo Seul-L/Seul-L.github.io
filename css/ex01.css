@@ -1,8 +1,44 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   font-size: 21px;
   line-height: 1.8;
+}
+
+.neon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 0 0 22px #ff005b;
+}
+
+.neon:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+
+.neon:before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  opacity: .5;
+  filter: blur(40px);
 }
 
 .content-html, .content-howto {
@@ -14,6 +50,13 @@ a {
   color: #767ef2;
   text-decoration: underline;
   font-style: italic;
+}
+
+.ex {
+  width: 100%;
+  background: url('night-trees-stars.jpg');
+  position: relative;
+  display: inline-block;
 }
 
 .container {
