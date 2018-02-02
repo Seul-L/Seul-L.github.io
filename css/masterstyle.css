@@ -3,23 +3,25 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-size: 21px;
+  line-height: 1.8;
 }
 
 .content-html, .content-howto {
   margin-left: 15%;
-  padding: 1px 20px;
+  padding: 1px 50px;
 }
 
 /*** Navbar ***/
 
 nav ul {
+  font-size: 14px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 15%;
-  /*light grey*/
-  background-color: #f1f1f1;
+  /*light blue*/
+  background-color: #f1f8fd;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -111,8 +113,9 @@ nav li a:hover:not(.active) {
 /*** footer ***/
 
 footer {
-  text-align: center;
-  background-color: black;
-  color: white;
-  margin-left: 15%;
+  font-size: 14px;
+  text-align: right;
+  padding-right: 50px;
+  background-color: #767ef2;
+  color: #fff;
 }
